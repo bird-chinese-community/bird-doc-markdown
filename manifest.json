@@ -1,0 +1,208 @@
+{
+  "generated_at": "2025-10-03T03:51:16.906620+00:00",
+  "source_repo": "https://github.com/CZ-NIC/bird.git",
+  "source_commit": "56b106c6c33e5914975553fa0e9f90c88dba1117",
+  "source_version": "2.17.1",
+  "files": [
+    {
+      "path": "docs/user/architecture/graceful-restart.md",
+      "sha256": "84b97c535fe00de4df72b81ca3ef173bd5b84b8e7be8a6ed78a215d426e86751"
+    },
+    {
+      "path": "docs/user/architecture/index.md",
+      "sha256": "2e7cb38229f7877e569cc05dd9c8fb71b30954ad2c9978328d69f5d377f81505"
+    },
+    {
+      "path": "docs/user/architecture/mpls.md",
+      "sha256": "853c1c84beda49f2b80b060820c54da3208c2a2e3df2973ad9c01e917993b9e6"
+    },
+    {
+      "path": "docs/user/architecture/protocols-and-channels.md",
+      "sha256": "7248b2e4faf6ec49be2997e9b249e6ca6ee09c0cb2c9118a9563fcf74c5efd3b"
+    },
+    {
+      "path": "docs/user/architecture/routes-and-network-types.md",
+      "sha256": "81fb7ba70951486b35f5dacb4633b74f62fd8e46a727df8161cbd7d9e4cf453d"
+    },
+    {
+      "path": "docs/user/architecture/routing-tables.md",
+      "sha256": "35fd1ccbc6a57ac38e12b58f115b87b393a5dcdde47e5c52355be118baf82450"
+    },
+    {
+      "path": "docs/user/conclusions/future-work.md",
+      "sha256": "55a0c5b529848af6292ed56774fb74c8a05f58c2110107e69c3afdebe232432c"
+    },
+    {
+      "path": "docs/user/conclusions/getting-more-help.md",
+      "sha256": "49cbb26f33ad6e127bf8a215c800f4bde5a83c54a08d6e81e2ecdea60735fdf8"
+    },
+    {
+      "path": "docs/user/conclusions/index.md",
+      "sha256": "8b174a6e830d6c82ff45155e228b3612e894a049c6eab149d7a0b541a6c650aa"
+    },
+    {
+      "path": "docs/user/configuration/channel-options.md",
+      "sha256": "2c3cd78520ff8af85b484acb00d3d05a75c0f209f3c638da4238b12b78276e6a"
+    },
+    {
+      "path": "docs/user/configuration/global-options.md",
+      "sha256": "fa223b183e6bf501b59666f868a0d9fcc6e43e64a08a1bc381571de1786d261a"
+    },
+    {
+      "path": "docs/user/configuration/index.md",
+      "sha256": "05c2af2bea5d8bbba4185e63a4bd09c98ea745488b485eca18bfe3dcdb7b3d14"
+    },
+    {
+      "path": "docs/user/configuration/introduction.md",
+      "sha256": "622e0555d3ef9d6c7d71dc92817ae9d538bf58cfe6215f7a3e529cb65951b3ff"
+    },
+    {
+      "path": "docs/user/configuration/mpls-options.md",
+      "sha256": "f748e8d69af75c58214f2d1df534d47f6a9ab5f5eb0c3cb973da93a181967045"
+    },
+    {
+      "path": "docs/user/configuration/protocol-options.md",
+      "sha256": "dcf8c7de7b126d37fd90b6126b3862157cf6d4c2dfd37cf4469824dcfa1dbd1b"
+    },
+    {
+      "path": "docs/user/configuration/routing-table-options.md",
+      "sha256": "bbfdef5e6498d33d1a02008ddc24a219cb97ac89c3afb501b3b475d67667a53b"
+    },
+    {
+      "path": "docs/user/filters/control-structures.md",
+      "sha256": "9e4cc294d83ddc4d5759a989307b8871a8d4c14c1443f9efc25d957a25520e94"
+    },
+    {
+      "path": "docs/user/filters/data-types.md",
+      "sha256": "5758eba8367f60326c49e0dd5953caf9347bf2ee4d75c5a6ed45212800259a55"
+    },
+    {
+      "path": "docs/user/filters/index.md",
+      "sha256": "85f76a007cc9698e7d3acffdbee9d39a73d34877688301d15cbdeed476a71af5"
+    },
+    {
+      "path": "docs/user/filters/introduction.md",
+      "sha256": "68beb7da3b547555485d638edbd8938b02d419aa12d5f2af5d7675f49bf4f537"
+    },
+    {
+      "path": "docs/user/filters/operators.md",
+      "sha256": "137d3e5c46b490ac25e1db35afe07cbc177da419e48b8a7d64ac7c171527ac06"
+    },
+    {
+      "path": "docs/user/filters/other-statements.md",
+      "sha256": "555a9078069d6e1e542c289d4ead8f9ff8d846998ea404825f072cf5fec60ea3"
+    },
+    {
+      "path": "docs/user/filters/route-attributes.md",
+      "sha256": "9685e5e068051a181084a907f0f2245db143945970994fc7f96c56befc61c050"
+    },
+    {
+      "path": "docs/user/introduction/index.md",
+      "sha256": "c6afe9bf6019f396d571fc079e81a3af9f6c9d6a988fabb59a1959908d64234b"
+    },
+    {
+      "path": "docs/user/introduction/installing-bird.md",
+      "sha256": "010b9adefa5181a0928d7af11d5487ef3917bc15e8195d84292ffece07231893"
+    },
+    {
+      "path": "docs/user/introduction/privileges.md",
+      "sha256": "7afdc4b9bab28c7c9257ad2aafee2940a0e45b94bb0b1535dd680dea6e65d10b"
+    },
+    {
+      "path": "docs/user/introduction/running-bird.md",
+      "sha256": "de20a2aeacfec8c57f1de38dfb5edb43ca354822652b7f6d3047418e38ea9b8f"
+    },
+    {
+      "path": "docs/user/introduction/what-is-bird.md",
+      "sha256": "170333a43ac3564bc17fd3f9fe4d390012e0cfc1f14100f458d12b9829f43815"
+    },
+    {
+      "path": "docs/user/protocols/aggregator.md",
+      "sha256": "205208da3c6aede4cce28a36ce7e1b3554bd3b8da8546765c1edc8463987e768"
+    },
+    {
+      "path": "docs/user/protocols/babel.md",
+      "sha256": "e58a45a644c431099e3063906313648c566420442d1a39fb869380ed556a4c55"
+    },
+    {
+      "path": "docs/user/protocols/bfd.md",
+      "sha256": "f1a4c4e1fa5f9fcce1b91eea2272fd822dcc3eafcab522fe9f1e7ceae4ff29a7"
+    },
+    {
+      "path": "docs/user/protocols/bgp.md",
+      "sha256": "c9c68bfe8e7a8e7dd14a735e9d71b8a688427d471df68e75bab144f2e77daa42"
+    },
+    {
+      "path": "docs/user/protocols/bmp.md",
+      "sha256": "837014abe874a073deb1f898fb4e3c0251b289e03fd7a5fba2fb0b4d216fcbcf"
+    },
+    {
+      "path": "docs/user/protocols/device.md",
+      "sha256": "179cec5a14345ff067d8089eefc682a477acb8f9091e879645557c0f3bf11e59"
+    },
+    {
+      "path": "docs/user/protocols/direct.md",
+      "sha256": "bcfbcbe75258d910c3e913bf1eb3bc6a2bef9afb430d8e08829137e318eb43c8"
+    },
+    {
+      "path": "docs/user/protocols/index.md",
+      "sha256": "f251a022182dcaf23a92783cca450d3060a7ed825c7b0e00b91c491b737ad96c"
+    },
+    {
+      "path": "docs/user/protocols/kernel.md",
+      "sha256": "e89e04a5205b15cf31eee5dd828a567602c968c6453b87afb3b2ebd2f74ec14a"
+    },
+    {
+      "path": "docs/user/protocols/l3vpn.md",
+      "sha256": "afb2fd78d04f9acf9e5e860b34bae7b07a30377810f22178465b45673ddba945"
+    },
+    {
+      "path": "docs/user/protocols/mrt.md",
+      "sha256": "eb4dd11a14932627f6391a2d8be87989b4e3b44f4a930f8db2f9ba41af8367db"
+    },
+    {
+      "path": "docs/user/protocols/ospf.md",
+      "sha256": "582571df149c88306b620ddcf9e3a823799e5e9b8e237d9035f1bd531358f6b8"
+    },
+    {
+      "path": "docs/user/protocols/perf.md",
+      "sha256": "f6b525ba24b11ac41fb154e8e6fdef4837d20a17d09bb593b55f06a445fef9e6"
+    },
+    {
+      "path": "docs/user/protocols/pipe.md",
+      "sha256": "a0c6e664e5f9b18a95dde40ffefb5d28e8716cbfbe48f3661f78b4205c659917"
+    },
+    {
+      "path": "docs/user/protocols/radv.md",
+      "sha256": "2c32f21a3b9d22cd468aa86582c08ff9e92b9cf0ae2782ae8592bf7ae6b2f4e9"
+    },
+    {
+      "path": "docs/user/protocols/rip.md",
+      "sha256": "804b5f86c56c215131b2bcd39ba9cd514d69b9d1576d7f0989ab4168495415d5"
+    },
+    {
+      "path": "docs/user/protocols/rpki.md",
+      "sha256": "c46d21bac9381a8afc323b1cc3b7b18c31617eb2aa3725f628bb10ee4db56a8e"
+    },
+    {
+      "path": "docs/user/protocols/static.md",
+      "sha256": "715e7e87b820263640caf793646a3aa439e150aa542948b5ffbf6c556e765040"
+    },
+    {
+      "path": "docs/user/remote-control/configuration.md",
+      "sha256": "cbe7a3b1370efc86f62a49034d1c8b5f32f302a1b97e5b65cd21eb3a3eee9bf1"
+    },
+    {
+      "path": "docs/user/remote-control/index.md",
+      "sha256": "70b1cd48a2ff0af799665f340e57c79b64890f82f188d40dad501f9f6044beea"
+    },
+    {
+      "path": "docs/user/remote-control/overview.md",
+      "sha256": "f878e15502254a2b0ecb532db5363adf49e27e56d4e1fc39f73f32b0240a0154"
+    },
+    {
+      "path": "docs/user/remote-control/usage.md",
+      "sha256": "552676691d38eddbfa4be4394f75b8c1affaca71913d3597ce834e33b2ffb57c"
+    }
+  ]
+}
