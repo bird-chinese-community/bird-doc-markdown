@@ -1,6 +1,6 @@
 {
   "source_repo": "https://github.com/CZ-NIC/bird.git",
-  "source_commit": "33791f1f4b3b880921fb80e00cde6e5a1e37806f",
+  "source_commit": "dff90f5889fe8e7e01cb3d5b20adca13dafe9f89",
   "source_version": "2.17.1",
   "files": [
     {
@@ -173,7 +173,7 @@
     },
     {
       "path": "docs/user/protocols/radv.md",
-      "sha256": "2c32f21a3b9d22cd468aa86582c08ff9e92b9cf0ae2782ae8592bf7ae6b2f4e9"
+      "sha256": "b0b45ca4a6804281feca0f1f2cf88014049fd53ef9796afa8eb1941cd21f18a6"
     },
     {
       "path": "docs/user/protocols/rip.md",

@@ -224,6 +224,11 @@ This option specifies whether hosts may use the advertised prefix for
 This option specifies whether hosts may use the advertised prefix for
     stateless autoconfiguration. Default: yes
 
+<span id="radv-prefix-pd-preferred" class="code">pd preferred*switch*</span>  
+This option specifies whether hosts should use prefix delegation in DHCPv6
+    instead of using stateless address autoconfiguration (SLAAC).
+    Default: no.
+
 <span id="radv-prefix-valid-lifetime" class="code">valid lifetime *expr* \[sensitive *switch*\]</span>  
 This option specifies the time (in seconds) how long (after the
     receipt of RA) the prefix information is valid, i.e., autoconfigured
