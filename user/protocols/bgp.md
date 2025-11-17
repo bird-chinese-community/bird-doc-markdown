@@ -206,6 +206,7 @@ using the following configuration parameters:
         local [<ip>] [port <number>] [as <number>];
         neighbor [<ip> | range <prefix>] [onlink] [port <number>] [as <number>] [internal|external];
         interface "<text>";
+        interface range <interface pattern>;
         onlink <switch>;
         direct;
         multihop [<number>];
@@ -317,7 +318,14 @@ It is possible to specify network prefix (with `range` keyword)
     instances are spawned for incoming BGP connections (if source address
     matches the network prefix). It is possible to mix regular BGP instances
     with dynamic BGP instances and have multiple dynamic BGP instances with
-    different ranges.
+        different ranges. These spawned dynamic BGP instances share the parent
+        configuration, therefore by reconfiguring the parent protocol forces
+        reconfiguration of the spawned protocols.
+
+When the neighbor range is changed, all the spawned dynamic instances
+        shut down. Reconfiguration clears all dynamic instances which were
+        previously disabled by the `disable` CLI command. This may re-enable
+    connection of some clients otherwise blocked by the disabled instance.
 
 <span id="bgp-iface" class="code">interface "*text*"</span>  
 Define interface we should use for link-local BGP IPv6 sessions.
@@ -325,6 +333,19 @@ Define interface we should use for link-local BGP IPv6 sessions.
     (e.g., `neighbor fe80::1234%eth0 as 65000;`). The option may also be
     used for non link-local sessions when it is necessary to explicitly
     specify an interface, but only for direct (not multihop) sessions.
+
+<span id="bgp-iface-range" class="code">interface range *interface pattern*</span>  
+Set interface pattern to which the connection will be bound. This is
+    mostly useful with the `neighbor range` option and either link-local
+    addresses or with the `onlink` option where it's not known up front
+    which interface the connection comes on but it needs to stay there.
+
+This option requires `strict bind` to be on and creates a separate
+    listening socket for every single interface matching the pattern. If the
+        local address is set, it also requires this exact address to be set on
+        that interface to create a listening socket.
+
+Also see `strict bind` and `free bind`.
 
 <span id="bgp-onlink" class="code">onlink *switch*</span>  
 For a direct neighbor, the BGP session starts immediately without
@@ -381,19 +402,33 @@ Define minimum number of digits for index in names of spawned dynamic
 
 <span id="bgp-strict-bind" class="code">strict bind *switch*</span>  
 Specify whether BGP listening socket should be bound to a specific local
-    address (the same as the `source address`) and associated interface,
+    address (the same as the `source address`) and associated interface
     or to all addresses. Binding to a specific address could be useful in
     cases like running multiple BIRD instances on a machine, each using its
-    IP address. Note that listening sockets bound to a specific address and
-    to all addresses collide, therefore either all BGP protocols (of the
-    same address family and using the same local port) should have set
-    `strict bind`, or none of them. Default: disabled.
+    IP address.
+
+Note that listening sockets bound to a specific address and
+    to all addresses collide. Also listening sockets bound
+    to a specific interface and to all interfaces may behave weirdly.
+    Therefore, all BGP protocols (of the same address family and using
+    the same local port) should have set `strict bind`, or none of them,
+    and in the same way, all should have a `interface` or `interface range`
+    or none of them.
+
+Default: disabled.
 
 <span id="bgp-free-bind" class="code">free bind *switch*</span>  
 Use IP\_FREEBIND socket option for the listening socket, which allows
     binding to an IP address not (yet) assigned to an interface. Note that
     all BGP instances that share a listening socket should have the same
-    value of the `freebind` option. Default: disabled.
+    value of the `free bind` option.
+
+If `interface range` is set together with a local address
+    and `free bind` as well, it creates a free-bind listening socket
+    for every interface regardless of the assigned address. This is
+    an experimental feature.
+
+Default: disabled.
 
 <span id="bgp-check-link" class="code">check link *switch*</span>  
 BGP could use hardware link state into consideration.  If enabled,
@@ -1269,6 +1304,8 @@ Protocol options that cause a restart when changed:
 - `require hostname`
 - `require graceful restart`
 - `require long lived graceful restart`
+- `interface range`
+   if the already existing option is updated to another value.
 
 Channel options that cause a restart when changed:
 
@@ -1292,6 +1329,10 @@ incompatible with the current protocol state):
 - `mandatory`
 - `min long lived stale time`
 - `max long lived stale time`
+
+All these configuration changes apply also to the spawned dynamic BGP sessions
+and therefore reconfiguring the parent protocol may lead to shutdown of some or all
+of the dynamic BGP sessions.
 
 ### Attributes
 
